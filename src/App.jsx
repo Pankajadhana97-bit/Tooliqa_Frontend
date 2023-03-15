@@ -4,9 +4,9 @@ import { CountryOptions, YearOptions, MonthOptions } from "./componets/index";
 
 function App() {
   const [result, setResult] = useState([]);
-  const [country, setCountry] = useState("");
-  const [year, setYear] = useState("");
-  const [month, setMonth] = useState("");
+  const [country, setCountry] = useState("US");
+  const [year, setYear] = useState("2023");
+  const [month, setMonth] = useState("03");
   const [signal, setSignal] = useState(false);
 
   // when component did mount
@@ -16,7 +16,6 @@ function App() {
         const response = await axios.get(`http://localhost:5000/api`);
         const data = await response.data
         setResult(data);
-        console.log(data)
       };
       fetchData();
     } catch (error) {
