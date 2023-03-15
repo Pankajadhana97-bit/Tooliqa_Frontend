@@ -3,6 +3,7 @@ import React from "react";
 export const CountryOptions = ({ handleCountry }) => {
   return (
     <select
+      defaultValue={'US'}
       onChange={(e) => handleCountry(e.target.value)}
     >
       <option value="US">America</option>

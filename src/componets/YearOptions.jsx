@@ -2,7 +2,9 @@ import React from "react";
 
 export const YearOptions = ({ handleYear }) => {
   return (
-    <select onChange={(e) => handleYear(e.target.value)}>
+    <select
+      defaultValue={'2023'}
+      onChange={(e) => handleYear(e.target.value)}>
       <option value="1995">1995</option>
       <option value="1996">1996</option>
       <option value="1997">1997</option>
